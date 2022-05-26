@@ -8,8 +8,8 @@ function TodoItem() {
 
         <input type="check box" className='todoApp_Item-checkBox' />
         <div className='todoApp_item-contents'>ToDoList</div>
-        <button type='button' className='todoApp_item-addition'></button>
-        <button type='button' className='todoApp_item-delete'></button>
+        <button type='button' className='todoApp_item-addition'>추가</button>
+        <button type='button' className='todoApp_item-delete'>삭제</button>
 
     </li>
   )
