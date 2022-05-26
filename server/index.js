@@ -20,6 +20,10 @@ mongoose.connect('mongodb+srv://sungjun:3603132w@todo-list.qmch0.mongodb.net/?re
 app.get('/', (req, res) => {
   res.send('todo list')
 })
+
+app.post('/task', (req, res) => {
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
