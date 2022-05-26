@@ -3,7 +3,12 @@ const app = express()
 const port = 3000
 
 const mongoose = require('mongoose')
-const { Task } = require('./model/tast')
+const bodyParser = require('body-parser')
+
+const { Task } = require('./model/Task')
+
+
+
 mongoose.connect('mongodb+srv://sungjun:3603132w@todo-list.qmch0.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -15,8 +20,8 @@ mongoose.connect('mongodb+srv://sungjun:3603132w@todo-list.qmch0.mongodb.net/?re
 app.get('/', (req, res) => {
   res.send('todo list')
 })
-
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
+app.use(bodyParser.urlencoded({ extended: true }));
