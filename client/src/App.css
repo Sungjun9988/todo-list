@@ -1,6 +1,6 @@
 /* home.js */
 .todoApp_home {
-  max-width: 250px;
+  max-width: 480px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -11,8 +11,12 @@
 /* inputbox.js */
 
 .todoApp_inputbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .todoApp_inputbox-input {
+  width: 100%;
   border: none;
   border-bottom: 1px solid gray;
   padding: 10px;
@@ -21,22 +25,55 @@
 }
 
 .todoApp__inputbox-add {
-  padding : 12px;
   height: 50px;
+  width: 50px;
   color: #1c7ed6;
   background-color: #d0ebff;
   border: none;
-  width: 50px;
 }
 
 /* todolist */
-
+.todoApp_list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
 .todoApp_list-title {
   font-weight: 600;
+  display: flex;
+  text-align: left;
+}
+.todoApp_list_ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
 }
 
 /* todoitem */
-
-.todoApp_Item-checkBox {
-  margin: 10px;
+.todoApp_Item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 36px;
 }
+.todoApp_Item-checkBox {
+  margin-right: 10px;
+}
+.todoApp_item-contents {
+  flex: 1;
+}
+
+.todoApp_item-amend{
+  margin-right: 10px;
+  border: none;
+  background-color: white;
+}
+.todoApp_item-delete {
+  display: flex;
+  border: none;
+  background-color: white;
+}
+
+
