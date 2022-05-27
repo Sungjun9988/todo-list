@@ -25,11 +25,15 @@
 }
 
 .todoApp__inputbox-add {
-  height: 50px;
-  width: 50px;
+  height: 25px;
+  width: 25px;
   color: #1c7ed6;
-  background-color: #d0ebff;
+  background-color: white;
   border: none;
+  margin-top: 20xp;
+  cursor: pointer;
+  align-self:center
+
 }
 
 /* todolist */
@@ -69,11 +73,13 @@
   margin-right: 10px;
   border: none;
   background-color: white;
+  cursor: pointer;
 }
 .todoApp_item-delete {
   display: flex;
   border: none;
   background-color: white;
+  cursor: pointer;
 }
 
 

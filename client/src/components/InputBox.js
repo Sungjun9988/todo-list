@@ -1,4 +1,6 @@
 import React from 'react'
+import{ VscAdd }from"react-icons/vsc";   
+
 
 function InputBox() {
   return (
@@ -9,7 +11,7 @@ function InputBox() {
       className="todoApp_inputbox-input"
     />
     <button type="submit" className="todoApp__inputbox-add">
-      추가
+    <VscAdd />
     </button>
   </div>
   )
