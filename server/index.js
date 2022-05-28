@@ -4,8 +4,7 @@ const port = 3000
 
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-
-const { Task } = require('./model/Task')
+const { Task } = require('./model/todo')
 
 
 
@@ -21,7 +20,15 @@ app.get('/', (req, res) => {
   res.send('todo list')
 })
 
-app.post('/task', (req, res) => {
+app.post('/api/todo/',(req, res) => {
+  const task = new Task(req.body)
+  task.save((err, taskInfo) => {
+    if (err) return res.json({ success: false, err })
+    return res.status(200).json({
+      success: true
+    })
+  })
+
 })
 
 app.listen(port, () => {
@@ -29,3 +36,4 @@ app.listen(port, () => {
 })
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
