@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   res.send('todo list')
 })
 
-app.post('/api/todo/',(req, res) => {
+app.post('/add',(req, res) => {
   const task = new Task(req.body)
   task.save((err, taskInfo) => {
     if (err) return res.json({ success: false, err })
@@ -28,6 +28,14 @@ app.post('/api/todo/',(req, res) => {
       success: true
     })
   })
+
+app.delete('/delete',(req,res) => {
+
+})
+
+app.put('/update',(req,res) => {
+
+})
 
 })
 
